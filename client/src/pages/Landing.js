@@ -3,6 +3,8 @@ import main from '../assets/images/main.svg';
 import LandingWrapper from '../assets/wrappers/LandingPage';
 import { Logo } from '../components';
 
+import { Link } from 'react-router-dom';
+
 function Landing() {
   return (
     <LandingWrapper>
@@ -21,7 +23,7 @@ function Landing() {
             Taxidermy bicycle rights man bun vinyl, prism readymade pug keffiyeh
             tumblr. Wayfarers biodiesel hoodie, subway tile organic vibecession.
           </p>
-          <button className='btn btn-hero'>Login/Register</button>
+          <Link className='btn btn-hero'>Login/Register</Link>
         </div>
         <img src={main} alt='job tracker' className='img main-img' />
       </div>
