@@ -1,12 +1,13 @@
-import LandingWrapper from '../assets/wrappers/LandingPage';
-import logo from '../assets/images/logo.png';
 import main from '../assets/images/main.svg';
+
+import LandingWrapper from '../assets/wrappers/LandingPage';
+import { Logo } from '../components';
 
 function Landing() {
   return (
     <LandingWrapper>
       <nav>
-        <img src={logo} alt='Jobby' className='logo' />
+        <Logo />
       </nav>
       <div className='container page'>
         {/* info */}
