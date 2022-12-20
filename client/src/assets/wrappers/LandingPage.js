@@ -1,16 +1,21 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const Wrapper = styled.main`
+const LandingWrapper = styled.main`
   nav {
+    height: var(--nav-height);
     width: var(--fluid-width);
     max-width: var(--max-width);
     margin: 0 auto;
-    height: var(--nav-height);
     display: flex;
     align-items: center;
+    img {
+      width: 100px;
+      height: 100%;
+      color: blue;
+    }
   }
   .page {
-    min-height: calc(100vh - var(--nav-height));
+    min-height: calc(100% - var(--nav-height));
     display: grid;
     align-items: center;
     margin-top: -3rem;
@@ -36,5 +41,5 @@ const Wrapper = styled.main`
       display: block;
     }
   }
-`
-export default Wrapper
+`;
+export default LandingWrapper;
