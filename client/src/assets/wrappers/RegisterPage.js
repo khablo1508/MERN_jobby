@@ -12,7 +12,9 @@ const RegisterPageWrapper = styled.section`
     max-width: 400px;
     border-top: 5px solid var(--primary-500);
   }
-
+  img {
+    width: 30%;
+  }
   h3 {
     text-align: center;
   }
