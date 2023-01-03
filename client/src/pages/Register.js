@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import logo from '../assets/images/logo.png';
-import { FormRow } from '../components';
+import { FormRow, Alert } from '../components';
 import RegisterPageWrapper from '../assets/wrappers/RegisterPage';
 
 const initialState = {
@@ -8,6 +8,7 @@ const initialState = {
   email: '',
   password: '',
   isMember: true,
+  showAlert: false,
 };
 
 function Register() {
@@ -27,6 +28,7 @@ function Register() {
       <form className='form' onSubmit={handleSubmit}>
         <img src={logo} alt='' className='logo' />
         <h3>Login</h3>
+        {values.showAlert && <Alert />}
         {/* name input */}
         <FormRow
           type='text'
