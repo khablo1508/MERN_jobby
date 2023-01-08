@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import logo from '../assets/images/logo.png';
 import { FormRow, Alert } from '../components';
 import RegisterPageWrapper from '../assets/wrappers/RegisterPage';
-import { useAppContext } from '../context/reducer';
+import { useAppContext } from '../context/appContext';
 
 const initialState = {
   name: '',
