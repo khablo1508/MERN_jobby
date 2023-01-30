@@ -47,7 +47,15 @@ const AppProvider = ({ children }) => {
         type: REGISTER_USER_SUCCESS,
         payload: { user, token, location },
       });
-    } catch (error) {}
+      // ADD LOCAL STORAGE
+    } catch (error) {
+      console.log(error.response);
+      dispatch({
+        type: REGISTER_USER_ERROR,
+        payload: { msg: error.response.data.msg },
+      });
+    }
+    clearAlert();
   };
 
   return (
