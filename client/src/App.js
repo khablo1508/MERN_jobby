@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { Error, Landing, Register } from './pages';
+import { Error, Landing, ProtectedRoute, Register } from './pages';
 import {
   AddJob,
   AllJobs,
@@ -13,7 +13,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/dashboard' element={<SharedLayout />}>
+        <Route
+          path='/dashboard'
+          element={
+            <ProtectedRoute>
+              <SharedLayout />
+            </ProtectedRoute>
+          }
+        >
           {/* page with index attribute will be shown while redirecting to dashboard */}
           <Route index element={<Stats />} />
           <Route path='all-jobs' element={<AllJobs />} />
