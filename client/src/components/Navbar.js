@@ -6,7 +6,7 @@ import Logo from './Logo';
 
 function Navbar() {
   const [showLogout, setShowLogout] = useState(false);
-  const { toggleSidebar } = useAppContext();
+  const { user, logoutUser, toggleSidebar } = useAppContext();
 
   return (
     <NavbarWrapper>
@@ -27,17 +27,11 @@ function Navbar() {
             }}
           >
             <FaUserCircle />
-            Anna
+            {user?.name}
             <FaCaretDown />
           </button>
           <div className={showLogout ? 'dropdown show-dropdown' : 'dropdown'}>
-            <button
-              type='button'
-              className='dropdown-btn'
-              onClick={() => {
-                console.log('logout user');
-              }}
-            >
+            <button type='button' className='dropdown-btn' onClick={logoutUser}>
               logout{' '}
             </button>
           </div>
