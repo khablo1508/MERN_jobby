@@ -23,7 +23,9 @@ function Landing() {
             Taxidermy bicycle rights man bun vinyl, prism readymade pug keffiyeh
             tumblr. Wayfarers biodiesel hoodie, subway tile organic vibecession.
           </p>
-          <Link className='btn btn-hero'>Login/Register</Link>
+          <Link className='btn btn-hero' to='/register'>
+            Login/Register
+          </Link>
         </div>
         <img src={main} alt='job tracker' className='img main-img' />
       </div>
