@@ -4,6 +4,10 @@ const SmallSidebarWrapper = styled.aside`
   @media (min-width: 992px) {
     display: none;
   }
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
   .sidebar-container {
     position: fixed;
     inset: 0;
