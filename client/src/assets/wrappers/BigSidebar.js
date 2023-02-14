@@ -5,6 +5,10 @@ const BigSidebarWrapper = styled.aside`
   @media (min-width: 992px) {
     display: block;
     box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
     .sidebar-container {
       background: var(--white);
       min-height: 100vh;
