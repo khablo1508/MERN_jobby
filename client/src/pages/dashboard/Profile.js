@@ -14,11 +14,11 @@ function Profile() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // remove while testing
-    if (!name || !email || !lastName || !location) {
-      displayAlert();
-      return;
-    }
-    console.log({ name, email, lastName, location });
+    // if (!name || !email || !lastName || !location) {
+    //   displayAlert();
+    //   return;
+    // }
+    updateUser({ name, email, lastName, location });
   };
 
   return (
